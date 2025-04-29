@@ -6,6 +6,7 @@
     <title>Pricing - NoSweat AI</title>
     <link rel="icon" type="image/png" href="/icon16.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="/load-header.js"></script>
     <style>
         * {
             margin: 0;
@@ -18,84 +19,6 @@
             line-height: 1.6;
             color: #ffffff;
             background: #000000;
-        }
-
-        .header {
-            background: #111111;
-            color: white;
-            padding: 1.5rem 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 1px solid #222222;
-            position: relative;
-            min-height: 80px;
-        }
-
-        .header-link {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            text-decoration: none;
-            color: inherit;
-            position: absolute;
-            left: 2rem;
-            padding: 0.5rem;
-            margin: -0.5rem;
-            height: 40px;
-        }
-
-        .header-link:hover {
-            opacity: 0.9;
-        }
-
-        .header-logo {
-            height: 40px;
-            width: auto;
-        }
-
-        .header-title {
-            font-size: 1.75rem;
-            font-weight: 600;
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            padding: 0.5rem;
-            margin: -0.5rem;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .nav-link {
-            color: #e2e8f0;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.2s;
-            font-size: 1.1rem;
-            padding: 0.75rem 1rem;
-            border-radius: 6px;
-            min-height: 44px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .nav-link:hover {
-            color: #60a5fa;
-            background: rgba(96, 165, 250, 0.1);
-        }
-
-        .nav-link.active {
-            color: #60a5fa;
-            background: rgba(96, 165, 250, 0.1);
         }
 
         .container {
@@ -126,70 +49,65 @@
             margin: 0 auto 2rem;
         }
 
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 0;
+        }
+
         .pricing-card {
             background: #111111;
-            padding: 3rem;
-            border-radius: 10px;
+            padding: 2rem;
+            border-radius: 16px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s;
             border: 1px solid #222222;
             text-align: center;
-            max-width: 500px;
-            margin: 0 auto;
-            position: relative;
-            overflow: hidden;
         }
 
-        .pricing-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #3b82f6, #60a5fa);
+        .pricing-card:hover {
+            transform: translateY(-5px);
         }
 
-        .pricing-title {
-            font-size: 2rem;
+        .pricing-card h3 {
             color: #e2e8f0;
             margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .pricing-price {
-            font-size: 3.5rem;
-            color: #60a5fa;
-            margin-bottom: 2rem;
-            font-weight: 700;
-        }
-
-        .pricing-price span {
+            font-weight: 600;
             font-size: 1.5rem;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #6366f1;
+            margin-bottom: 1rem;
+        }
+
+        .price span {
+            font-size: 1rem;
             color: #94a3b8;
         }
 
         .pricing-features {
             list-style: none;
-            margin-bottom: 2rem;
+            margin: 2rem 0;
         }
 
         .pricing-features li {
             color: #94a3b8;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #222222;
         }
 
-        .pricing-features li::before {
-            content: '✓';
-            color: #60a5fa;
+        .pricing-features li:last-child {
+            border-bottom: none;
         }
 
         .cta-button {
             display: inline-block;
-            background: #3b82f6;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
             color: white;
             padding: 1rem 2rem;
             border-radius: 8px;
@@ -201,11 +119,12 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
+            width: 100%;
         }
 
         .cta-button:hover {
-            background: #2563eb;
             transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
         }
 
         .footer {
@@ -247,219 +166,65 @@
             margin: 0.5rem 0;
         }
 
-        .header-right {
-            position: absolute;
-            right: 2rem;
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-        }
-
-        .header-right a {
-            color: #ffffff;
-            text-decoration: none;
+        .popular-badge {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
             font-size: 0.9rem;
-            transition: all 0.2s;
-            padding: 0.75rem 1rem;
-            margin: -0.75rem;
-            border-radius: 6px;
-            min-height: 44px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .header-right a:hover {
-            opacity: 0.8;
-            background: rgba(96, 165, 250, 0.1);
-        }
-
-        .hamburger {
-            display: none;
-            cursor: pointer;
-            position: absolute;
-            right: 2rem;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 1001;
-            padding: 10px;
-            margin: -10px;
-            align-items: center;
-            justify-content: center;
-            height: 40px;
-            width: 40px;
-        }
-
-        .hamburger span {
-            display: block;
-            width: 24px;
-            height: 2px;
-            background: #ffffff;
-            margin: 5px 0;
-            transition: all 0.3s;
-            border-radius: 3px;
-        }
-
-        .mobile-menu {
-            display: none;
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 280px;
-            height: 100vh;
-            background: #111111;
-            padding: 6rem 2rem 2rem;
-            transition: right 0.3s ease;
-            z-index: 1000;
-            border-left: 1px solid #222222;
-            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .mobile-menu.active {
-            right: 0;
-        }
-
-        .mobile-menu-backdrop {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 999;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .mobile-menu-backdrop.active {
-            opacity: 1;
-        }
-
-        .mobile-menu .nav-links {
-            position: static;
-            transform: none;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 1rem;
-            display: flex;
-        }
-
-        .mobile-menu .nav-link {
-            width: 100%;
-            padding: 1rem;
-            color: #e2e8f0;
-            text-decoration: none;
             font-weight: 500;
-            transition: all 0.2s;
-            font-size: 1.1rem;
-            border-radius: 6px;
-        }
-
-        .mobile-menu .nav-link:hover {
-            color: #60a5fa;
-            background: rgba(96, 165, 250, 0.1);
-        }
-
-        .mobile-menu .nav-link.active {
-            color: #60a5fa;
-            background: rgba(96, 165, 250, 0.1);
-        }
-
-        .mobile-menu .header-right {
-            position: static;
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 1px solid #222222;
-            display: block;
-        }
-
-        .mobile-menu .header-right a {
-            display: block;
-            padding: 1rem;
-            font-size: 1.1rem;
-            color: #e2e8f0;
-        }
-
-        @media (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
-
-            .nav-links, .header-right {
-                display: none;
-            }
-
-            .mobile-menu {
-                display: block;
-            }
-
-            .mobile-menu-backdrop {
-                display: block;
-            }
-
-            .hamburger.active span:nth-child(1) {
-                transform: rotate(45deg) translate(5px, 5px);
-            }
-
-            .hamburger.active span:nth-child(2) {
-                opacity: 0;
-            }
-
-            .hamburger.active span:nth-child(3) {
-                transform: rotate(-45deg) translate(7px, -6px);
-            }
+            margin-bottom: 1rem;
+            display: inline-block;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <a href="/" class="header-link">
-            <img src="/icon128.png" alt="NoSweat AI Logo" class="header-logo">
-            <span class="header-title">NoSweatAI</span>
-        </a>
-        <nav class="nav-links">
-            <a href="/" class="nav-link">Home</a>
-            <a href="/features" class="nav-link">Features</a>
-            <a href="/pricing" class="nav-link active">Pricing</a>
-        </nav>
-        <div class="header-right">
-            <a href="/extension-privacy">Privacy Policy</a>
-            <a href="/terms">Terms of Service</a>
-        </div>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="mobile-menu">
-            <nav class="nav-links">
-                <a href="/" class="nav-link">Home</a>
-                <a href="/features" class="nav-link">Features</a>
-                <a href="/pricing" class="nav-link active">Pricing</a>
-            </nav>
-            <div class="header-right">
-                <a href="/extension-privacy">Privacy Policy</a>
-                <a href="/terms">Terms of Service</a>
-            </div>
-        </div>
-    </div>
-
     <div class="container">
         <section class="hero">
             <h1>Simple, Transparent Pricing</h1>
+            <p>Choose the plan that works best for you. All plans include our core features.</p>
         </section>
 
-        <section class="pricing-card">
-            <h2 class="pricing-title">Pro Plan</h2>
-            <div class="pricing-price">$3.99<span>/month</span></div>
-            <ul class="pricing-features">
-                <li>300 question solves per month</li>
-                <li>Instant, Accurate Answers</li>
-                <li>Undetectable by all sites</li>
-                <li>Cancel Anytime in 1 Click. No hidden fees.</li>
-            </ul>
-            <a href="#" class="cta-button">Get Started</a>
+        <section class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Basic</h3>
+                <div class="price">$9.99<span>/month</span></div>
+                <ul class="pricing-features">
+                    <li>100 Questions per month</li>
+                    <li>Basic AI support</li>
+                    <li>Standard response time</li>
+                    <li>Email support</li>
+                </ul>
+                <a href="#" class="cta-button">Get Started</a>
+            </div>
+
+            <div class="pricing-card">
+                <div class="popular-badge">Most Popular</div>
+                <h3>Pro</h3>
+                <div class="price">$19.99<span>/month</span></div>
+                <ul class="pricing-features">
+                    <li>Unlimited questions</li>
+                    <li>Advanced AI support</li>
+                    <li>Priority response time</li>
+                    <li>24/7 support</li>
+                    <li>Undetectable mode</li>
+                </ul>
+                <a href="#" class="cta-button">Get Started</a>
+            </div>
+
+            <div class="pricing-card">
+                <h3>Enterprise</h3>
+                <div class="price">Custom</div>
+                <ul class="pricing-features">
+                    <li>Custom question limit</li>
+                    <li>Premium AI support</li>
+                    <li>Instant response time</li>
+                    <li>Dedicated support</li>
+                    <li>Custom features</li>
+                    <li>API access</li>
+                </ul>
+                <a href="#" class="cta-button">Contact Us</a>
+            </div>
         </section>
     </div>
 
@@ -470,36 +235,5 @@
             <a href="/terms">Terms of Service</a>
         </div>
     </footer>
-
-    <div class="mobile-menu-backdrop"></div>
-
-    <script>
-        const hamburger = document.querySelector('.hamburger');
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const backdrop = document.querySelector('.mobile-menu-backdrop');
-        
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-            backdrop.classList.toggle('active');
-        });
-
-        // Close menu when clicking backdrop
-        backdrop.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            mobileMenu.classList.remove('active');
-            backdrop.classList.remove('active');
-        });
-
-        // Close menu when clicking a link
-        const mobileLinks = document.querySelectorAll('.mobile-menu .nav-link, .mobile-menu .header-right a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                mobileMenu.classList.remove('active');
-                backdrop.classList.remove('active');
-            });
-        });
-    </script>
 </body>
 </html> 

@@ -6,6 +6,7 @@
     <title>Terms of Service - NoSweat AI</title>
     <link rel="icon" type="image/png" href="/icon16.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="/load-header.js"></script>
     <style>
         * {
             margin: 0;
@@ -20,94 +21,39 @@
             background: #000000;
         }
 
-        .header {
-            background: #111111;
-            color: white;
-            padding: 1.5rem 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 1px solid #222222;
-            position: relative;
-            min-height: 80px;
-        }
-
-        .header-logo {
-            height: 40px;
-            width: auto;
-        }
-
-        .header-title {
-            font-size: 1.75rem;
-            font-weight: 600;
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            padding: 0.5rem;
-            margin: -0.5rem;
-        }
-
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
         }
 
-        .terms-section {
+        .content {
             background: #111111;
             padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            margin-bottom: 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
             border: 1px solid #222222;
-            text-align: center;
         }
 
-        .terms-section h1 {
+        h1 {
             font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #e2e8f0;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             font-weight: 700;
         }
 
-        .terms-section h2 {
-            font-size: 1.5rem;
-            color: #60a5fa;
+        h2 {
+            font-size: 1.75rem;
             margin: 2rem 0 1rem;
-            font-weight: 600;
+            color: #e2e8f0;
         }
 
-        .terms-section p {
-            margin-bottom: 1rem;
+        p {
             color: #94a3b8;
-        }
-
-        .terms-section ul {
-            margin-left: 2rem;
             margin-bottom: 1rem;
-        }
-
-        .terms-section li {
-            margin-bottom: 0.5rem;
-            color: #94a3b8;
-        }
-
-        .home-button {
-            display: inline-block;
-            background: #3b82f6;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.2s;
-            margin-top: 2rem;
-        }
-
-        .home-button:hover {
-            background: #2563eb;
-            transform: translateY(-2px);
         }
 
         .footer {
@@ -148,340 +94,50 @@
         .footer p {
             margin: 0.5rem 0;
         }
-
-        .header-link {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            text-decoration: none;
-            color: inherit;
-            position: absolute;
-            left: 2rem;
-            padding: 0.5rem;
-            margin: -0.5rem;
-            height: 40px;
-        }
-
-        .header-link:hover {
-            opacity: 0.9;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .nav-link {
-            color: #e2e8f0;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.2s;
-            font-size: 1.1rem;
-            padding: 0.75rem 1rem;
-            border-radius: 6px;
-            min-height: 44px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .nav-link:hover {
-            color: #60a5fa;
-            background: rgba(96, 165, 250, 0.1);
-        }
-
-        .nav-link.active {
-            color: #60a5fa;
-            background: rgba(96, 165, 250, 0.1);
-        }
-
-        .header-right {
-            position: absolute;
-            right: 2rem;
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-        }
-
-        .header-right a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: all 0.2s;
-            padding: 0.75rem 1rem;
-            margin: -0.75rem;
-            border-radius: 6px;
-            min-height: 44px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .header-right a:hover {
-            opacity: 0.8;
-            background: rgba(96, 165, 250, 0.1);
-        }
-
-        .hamburger {
-            display: none;
-            cursor: pointer;
-            position: absolute;
-            right: 2rem;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 1001;
-            padding: 10px;
-            margin: -10px;
-            align-items: center;
-            justify-content: center;
-            height: 40px;
-            width: 40px;
-        }
-
-        .hamburger span {
-            display: block;
-            width: 24px;
-            height: 2px;
-            background: #ffffff;
-            margin: 5px 0;
-            transition: all 0.3s;
-            border-radius: 3px;
-        }
-
-        .mobile-menu {
-            display: none;
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 280px;
-            height: 100vh;
-            background: #111111;
-            padding: 6rem 2rem 2rem;
-            transition: right 0.3s ease;
-            z-index: 1000;
-            border-left: 1px solid #222222;
-            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .mobile-menu.active {
-            right: 0;
-        }
-
-        .mobile-menu-backdrop {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 999;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .mobile-menu-backdrop.active {
-            opacity: 1;
-        }
-
-        .mobile-menu .nav-links {
-            position: static;
-            transform: none;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 1rem;
-            display: flex;
-        }
-
-        .mobile-menu .nav-link {
-            width: 100%;
-            padding: 1rem;
-            color: #e2e8f0;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.2s;
-            font-size: 1.1rem;
-            border-radius: 6px;
-        }
-
-        .mobile-menu .nav-link:hover {
-            color: #60a5fa;
-            background: rgba(96, 165, 250, 0.1);
-        }
-
-        .mobile-menu .nav-link.active {
-            color: #60a5fa;
-            background: rgba(96, 165, 250, 0.1);
-        }
-
-        .mobile-menu .header-right {
-            position: static;
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 1px solid #222222;
-            display: block;
-        }
-
-        .mobile-menu .header-right a {
-            display: block;
-            padding: 1rem;
-            font-size: 1.1rem;
-            color: #e2e8f0;
-        }
-
-        @media (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
-
-            .nav-links, .header-right {
-                display: none;
-            }
-
-            .mobile-menu {
-                display: block;
-            }
-
-            .mobile-menu-backdrop {
-                display: block;
-            }
-
-            .hamburger.active span:nth-child(1) {
-                transform: rotate(45deg) translate(5px, 5px);
-            }
-
-            .hamburger.active span:nth-child(2) {
-                opacity: 0;
-            }
-
-            .hamburger.active span:nth-child(3) {
-                transform: rotate(-45deg) translate(7px, -6px);
-            }
-        }
     </style>
 </head>
 <body>
-    <div class="header">
-        <a href="/" class="header-link">
-            <img src="/icon128.png" alt="NoSweat AI Logo" class="header-logo">
-            <span class="header-title">NoSweatAI</span>
-        </a>
-        <nav class="nav-links">
-            <a href="/" class="nav-link">Home</a>
-            <a href="/features" class="nav-link">Features</a>
-            <a href="/pricing" class="nav-link">Pricing</a>
-        </nav>
-        <div class="header-right">
-            <a href="/extension-privacy">Privacy Policy</a>
-        </div>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="mobile-menu">
-            <nav class="nav-links">
-                <a href="/" class="nav-link">Home</a>
-                <a href="/features" class="nav-link">Features</a>
-                <a href="/pricing" class="nav-link">Pricing</a>
-            </nav>
-            <div class="header-right">
-                <a href="/extension-privacy">Privacy Policy</a>
-                <a href="/terms">Terms of Service</a>
-            </div>
-        </div>
-    </div>
-
     <div class="container">
-        <section class="terms-section">
+        <div class="content">
             <h1>Terms of Service</h1>
-            <p>Effective Date: April 28, 2025</p>
+            <p>Last updated: March 15, 2024</p>
 
-            <p>Welcome to NoSweat AI. By installing or using NoSweat AI, you agree to the following Terms of Service. Please read them carefully.</p>
+            <h2>1. Acceptance of Terms</h2>
+            <p>By accessing and using NoSweat AI, you agree to be bound by these Terms of Service and all applicable laws and regulations.</p>
 
-            <h2>1. Description of Service</h2>
-            <p>NoSweat AI is a browser extension that allows users to capture screenshots and use AI technology to solve visible questions. The Extension interacts with servers to analyze the screenshots and return suggested answers.</p>
-
-            <h2>2. Eligibility</h2>
-            <p>You must be at least 13 years old to use NoSweat AI. By using the Extension, you represent that you meet this age requirement.</p>
+            <h2>2. Use of Service</h2>
+            <p>Our service is designed to provide AI-powered assistance for educational purposes. You agree to use the service responsibly and in accordance with these terms.</p>
 
             <h2>3. User Responsibilities</h2>
-            <p>You agree to use NoSweat AI only for lawful and personal educational purposes.</p>
-            <p>You agree not to misuse the Extension, including attempting to reverse-engineer, modify, or interfere with its functionality.</p>
-            <p>You are responsible for any content you choose to capture and submit through the Extension.</p>
+            <p>You are responsible for:</p>
+            <ul>
+                <li>Maintaining the security of your account</li>
+                <li>Using the service in compliance with applicable laws</li>
+                <li>Not sharing your account credentials</li>
+            </ul>
 
-            <h2>4. Account Registration</h2>
-            <p>Certain features may require authentication. Users are responsible for maintaining the confidentiality of their account credentials. You agree to notify us immediately if you suspect unauthorized use of your account.</p>
+            <h2>4. Subscription and Payments</h2>
+            <p>Subscription terms and payment details are as follows:</p>
+            <ul>
+                <li>Subscriptions are billed in advance</li>
+                <li>You can cancel at any time</li>
+                <li>Refunds are handled on a case-by-case basis</li>
+            </ul>
 
-            <h2>5. Payment and Subscriptions</h2>
-            <p>NoSweat AI offers both free and paid subscription plans. Paid plans are billed through a third-party payment provider (Stripe). Subscriptions automatically renew unless canceled. You may manage or cancel your subscription at any time via the "Manage Subscription" feature inside the Extension.</p>
+            <h2>5. Intellectual Property</h2>
+            <p>All content and materials available through our service are protected by intellectual property rights.</p>
 
-            <h2>6. Data Collection and Privacy</h2>
-            <p>NoSweat AI collects limited user data such as email addresses for authentication purposes. We do not collect or store any screenshots, school names, course names, or payment information. For more details, please review our Privacy Policy.</p>
-
-            <h2>7. Intellectual Property</h2>
-            <p>The NoSweat AI Extension, including its software and branding, is the property of NoSweat AI. You may not copy, modify, or distribute any part of the Extension without explicit permission.</p>
-
-            <h2>8. Disclaimers</h2>
-            <p>NoSweat AI is provided on an "as is" and "as available" basis.</p>
-            <p>We make no guarantees regarding the accuracy or completeness of answers generated through the Extension.</p>
-            <p>We are not liable for any damages or losses resulting from your use of the Extension.</p>
-
-            <h2>9. Modifications</h2>
-            <p>We reserve the right to modify or discontinue any feature of NoSweat AI at any time without notice. Updated versions of these Terms will be posted with a new "Effective Date."</p>
-
-            <h2>10. Termination</h2>
-            <p>We may suspend or terminate your access to NoSweat AI if you violate these Terms or if required by law.</p>
-
-            <h2>11. Contact Us</h2>
-            <p>If you have any questions about these Terms, please contact us at:</p>
-            <p>Email: nosweatai@gmail.com</p>
-
-            <a href="/" class="home-button">Return to Home</a>
-        </section>
+            <h2>6. Contact Us</h2>
+            <p>If you have any questions about these terms, please contact us at terms@nosweatai.com</p>
+        </div>
     </div>
 
     <footer class="footer">
-        <p>&copy; 2024 NoSweat AI. All rights reserved.</p>
+        <p>&copy; 2025 NoSweat AI. All rights reserved.</p>
         <div class="footer-links">
             <a href="/extension-privacy">Privacy Policy</a>
             <a href="/terms">Terms of Service</a>
         </div>
     </footer>
-
-    <div class="mobile-menu-backdrop"></div>
-
-    <script>
-        const hamburger = document.querySelector('.hamburger');
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const backdrop = document.querySelector('.mobile-menu-backdrop');
-        
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-            backdrop.classList.toggle('active');
-        });
-
-        // Close menu when clicking backdrop
-        backdrop.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            mobileMenu.classList.remove('active');
-            backdrop.classList.remove('active');
-        });
-
-        // Close menu when clicking a link
-        const mobileLinks = document.querySelectorAll('.mobile-menu .nav-link, .mobile-menu .header-right a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                mobileMenu.classList.remove('active');
-                backdrop.classList.remove('active');
-            });
-        });
-    </script>
 </body>
 </html> 
