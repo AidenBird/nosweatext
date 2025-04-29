@@ -289,7 +289,7 @@
         flex-direction: row;
         padding: 1rem;
         min-height: auto;
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     .header-link {
