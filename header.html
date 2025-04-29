@@ -12,51 +12,9 @@
         <a href="/extension-privacy">Privacy Policy</a>
         <a href="/terms">Terms of Service</a>
     </div>
-    <div class="hamburger">
-        <div class="hamburger-inner"></div>
-    </div>
-    <div class="mobile-menu">
-        <nav class="nav-links">
-            <a href="/" class="nav-link">Home <span class="icon">→</span></a>
-            <a href="/features" class="nav-link">Features <span class="icon">→</span></a>
-            <a href="/pricing" class="nav-link">Pricing <span class="icon">→</span></a>
-        </nav>
-        <div class="header-right">
-            <a href="/extension-privacy">Privacy Policy <span class="icon">→</span></a>
-            <a href="/terms">Terms of Service <span class="icon">→</span></a>
-        </div>
-    </div>
-    <div class="mobile-menu-backdrop"></div>
 </div>
 
 <script>
-    const hamburger = document.querySelector('.hamburger');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const backdrop = document.querySelector('.mobile-menu-backdrop');
-    
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        mobileMenu.classList.toggle('active');
-        backdrop.classList.toggle('active');
-    });
-
-    // Close menu when clicking backdrop
-    backdrop.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        mobileMenu.classList.remove('active');
-        backdrop.classList.remove('active');
-    });
-
-    // Close menu when clicking a link
-    const mobileLinks = document.querySelectorAll('.mobile-menu .nav-link, .mobile-menu .header-right a');
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            mobileMenu.classList.remove('active');
-            backdrop.classList.remove('active');
-        });
-    });
-
     // Set active nav link based on current page
     const currentPath = window.location.pathname;
     const navLinks = document.querySelectorAll('.nav-link');
