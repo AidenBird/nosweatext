@@ -247,18 +247,26 @@
 @media (max-width: 768px) {
     .hamburger {
         display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 
     .nav-links, .header-right {
         display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
     }
 
     .mobile-menu {
         display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 
     .mobile-menu-backdrop {
         display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 
     .hamburger.active span:nth-child(1) {

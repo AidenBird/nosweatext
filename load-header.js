@@ -1,12 +1,6 @@
 async function loadHeader() {
     try {
-        // Load CSS first
-        const cssLink = document.createElement('link');
-        cssLink.rel = 'stylesheet';
-        cssLink.href = '/header.css';
-        document.head.appendChild(cssLink);
-
-        // Load header HTML
+        // Load header HTML first
         const response = await fetch('/header.html');
         const html = await response.text();
         
@@ -18,8 +12,14 @@ async function loadHeader() {
         if (htmlMatch) {
             document.body.insertAdjacentHTML('afterbegin', htmlMatch[0]);
         }
+
+        // Load CSS after HTML is in place
+        const cssLink = document.createElement('link');
+        cssLink.rel = 'stylesheet';
+        cssLink.href = '/header.css';
+        document.head.appendChild(cssLink);
         
-        // Execute the script
+        // Execute the script after CSS is loaded
         if (scriptMatch) {
             const scriptContent = scriptMatch[1];
             const scriptElement = document.createElement('script');
