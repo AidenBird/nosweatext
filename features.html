@@ -238,6 +238,139 @@
         .header-right a:hover {
             opacity: 0.8;
         }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            position: absolute;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1001;
+            padding: 10px;
+            margin: -10px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: #ffffff;
+            margin: 5px 0;
+            transition: all 0.3s;
+            border-radius: 3px;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 280px;
+            height: 100vh;
+            background: #111111;
+            padding: 6rem 2rem 2rem;
+            transition: right 0.3s ease;
+            z-index: 1000;
+            border-left: 1px solid #222222;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu-backdrop {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .mobile-menu-backdrop.active {
+            opacity: 1;
+        }
+
+        .mobile-menu .nav-links {
+            position: static;
+            transform: none;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+            display: flex;
+        }
+
+        .mobile-menu .nav-link {
+            width: 100%;
+            padding: 1rem;
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s;
+            font-size: 1.1rem;
+            border-radius: 6px;
+        }
+
+        .mobile-menu .nav-link:hover {
+            color: #60a5fa;
+            background: rgba(96, 165, 250, 0.1);
+        }
+
+        .mobile-menu .nav-link.active {
+            color: #60a5fa;
+            background: rgba(96, 165, 250, 0.1);
+        }
+
+        .mobile-menu .header-right {
+            position: static;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #222222;
+            display: block;
+        }
+
+        .mobile-menu .header-right a {
+            display: block;
+            padding: 1rem;
+            font-size: 1.1rem;
+            color: #e2e8f0;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links, .header-right {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .mobile-menu-backdrop {
+                display: block;
+            }
+
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+        }
     </style>
 </head>
 <body>
@@ -253,6 +386,21 @@
         </nav>
         <div class="header-right">
             <a href="/extension-privacy">Privacy Policy</a>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="mobile-menu">
+            <nav class="nav-links">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/features" class="nav-link active">Features</a>
+                <a href="/pricing" class="nav-link">Pricing</a>
+            </nav>
+            <div class="header-right">
+                <a href="/extension-privacy">Privacy Policy</a>
+            </div>
         </div>
     </div>
 
@@ -296,5 +444,36 @@
         <p>&copy; 2024 NoSweat AI. All rights reserved.</p>
         <p><a href="/extension-privacy">Privacy Policy</a></p>
     </footer>
+
+    <div class="mobile-menu-backdrop"></div>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const backdrop = document.querySelector('.mobile-menu-backdrop');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            backdrop.classList.toggle('active');
+        });
+
+        // Close menu when clicking backdrop
+        backdrop.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            backdrop.classList.remove('active');
+        });
+
+        // Close menu when clicking a link
+        const mobileLinks = document.querySelectorAll('.mobile-menu .nav-link, .mobile-menu .header-right a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                backdrop.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html> 
