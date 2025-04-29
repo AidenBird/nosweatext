@@ -3,6 +3,10 @@
       {
         "source": "/success",
         "destination": "/success.html"
+      },
+      {
+        "source": "/extension-privacy",
+        "destination": "/extension-privacy.html"
       }
     ]
   }
