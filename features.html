@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NoSweat AI - AI-Powered Question Solving</title>
+    <title>Features - NoSweat AI</title>
     <link rel="icon" type="image/png" href="/icon16.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -26,110 +26,8 @@
             padding: 1rem 2rem;
             display: flex;
             align-items: center;
-            gap: 1rem;
+            justify-content: space-between;
             border-bottom: 1px solid #334155;
-        }
-
-        .header-logo {
-            height: 40px;
-            width: auto;
-        }
-
-        .header-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #e2e8f0;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 4rem 0;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            color: #e2e8f0;
-            font-weight: 700;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            color: #94a3b8;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 4rem 0;
-        }
-
-        .feature-card {
-            background: #1e293b;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            transition: transform 0.2s;
-            border: 1px solid #334155;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-card h3 {
-            color: #60a5fa;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .feature-card p {
-            color: #94a3b8;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: #3b82f6;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 2rem;
-            transition: all 0.2s;
-        }
-
-        .cta-button:hover {
-            background: #2563eb;
-            transform: translateY(-2px);
-        }
-
-        .footer {
-            background: #1e293b;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
-            color: #94a3b8;
-            border-top: 1px solid #334155;
-        }
-
-        .footer a {
-            color: #60a5fa;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .footer a:hover {
-            color: #3b82f6;
         }
 
         .header-link {
@@ -160,6 +58,103 @@
         .nav-link:hover {
             color: #60a5fa;
         }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: #e2e8f0;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 0;
+        }
+
+        .feature-card {
+            background: #1e293b;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s;
+            border: 1px solid #334155;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #60a5fa;
+        }
+
+        .feature-card h3 {
+            color: #e2e8f0;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .feature-card p {
+            color: #94a3b8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #3b82f6;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .cta-button:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            background: #1e293b;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            color: #94a3b8;
+            border-top: 1px solid #334155;
+        }
+
+        .footer a {
+            color: #60a5fa;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer a:hover {
+            color: #3b82f6;
+        }
     </style>
 </head>
 <body>
@@ -177,36 +172,42 @@
 
     <div class="container">
         <section class="hero">
-            <h1>Get Instant Answers with AI</h1>
-            <p>Transform your browsing experience with our intelligent Chrome extension that answers your questions in real-time using advanced AI technology.</p>
-            <a href="#" class="cta-button">Add to Chrome - It's Free!</a>
+            <h1>Features that Set Us Apart</h1>
+            <p>Voted #1 by 400+ College Students</p>
         </section>
 
-        <section class="features">
+        <section class="features-grid">
             <div class="feature-card">
-                <h3>🎯 Instant Answers</h3>
-                <p>Get accurate answers to your questions instantly, powered by state-of-the-art AI technology.</p>
+                <div class="feature-icon">📚</div>
+                <h3>AI-Powered Practice Exams</h3>
+                <p>Generate unlimited customized practice exams tailored to your learning needs</p>
             </div>
             <div class="feature-card">
-                <h3>🔍 Context-Aware</h3>
-                <p>Our AI understands the context of your current webpage to provide more relevant answers.</p>
+                <div class="feature-icon">📊</div>
+                <h3>Smart Study Analytics</h3>
+                <p>Track your progress and identify areas for improvement with detailed performance insights</p>
             </div>
             <div class="feature-card">
-                <h3>⚡ Easy to Use</h3>
-                <p>Simply highlight text and right-click, or use our intuitive command bar to get answers instantly.</p>
+                <div class="feature-icon">🎯</div>
+                <h3>Personalized Learning</h3>
+                <p>Adaptive learning algorithms that adjust to your knowledge level and study pace</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📖</div>
+                <h3>Comprehensive Coverage</h3>
+                <p>Extensive question bank covering all major subjects and topics</p>
             </div>
         </section>
 
         <section class="hero">
-            <h2>Start Getting Smart Answers Today</h2>
-            <p>Join thousands of users who are already saving time and getting better answers with NoSweat AI.</p>
-            <a href="#" class="cta-button">Install Extension</a>
+            <p>Join thousands of successful students today!</p>
+            <a href="/pricing" class="cta-button">Get Started</a>
         </section>
     </div>
 
     <footer class="footer">
         <p>&copy; 2024 NoSweat AI. All rights reserved.</p>
-        <p><a href="/extension-privacy" style="color: #7c4dff; text-decoration: none;">Privacy Policy</a></p>
+        <p><a href="/extension-privacy">Privacy Policy</a></p>
     </footer>
 </body>
 </html> 

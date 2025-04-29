@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NoSweat AI - AI-Powered Question Solving</title>
+    <title>Pricing - NoSweat AI</title>
     <link rel="icon" type="image/png" href="/icon16.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -26,110 +26,8 @@
             padding: 1rem 2rem;
             display: flex;
             align-items: center;
-            gap: 1rem;
+            justify-content: space-between;
             border-bottom: 1px solid #334155;
-        }
-
-        .header-logo {
-            height: 40px;
-            width: auto;
-        }
-
-        .header-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #e2e8f0;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 4rem 0;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            color: #e2e8f0;
-            font-weight: 700;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            color: #94a3b8;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 4rem 0;
-        }
-
-        .feature-card {
-            background: #1e293b;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            transition: transform 0.2s;
-            border: 1px solid #334155;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-card h3 {
-            color: #60a5fa;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .feature-card p {
-            color: #94a3b8;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: #3b82f6;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 2rem;
-            transition: all 0.2s;
-        }
-
-        .cta-button:hover {
-            background: #2563eb;
-            transform: translateY(-2px);
-        }
-
-        .footer {
-            background: #1e293b;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
-            color: #94a3b8;
-            border-top: 1px solid #334155;
-        }
-
-        .footer a {
-            color: #60a5fa;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .footer a:hover {
-            color: #3b82f6;
         }
 
         .header-link {
@@ -160,6 +58,128 @@
         .nav-link:hover {
             color: #60a5fa;
         }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: #e2e8f0;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .pricing-card {
+            background: #1e293b;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            border: 1px solid #334155;
+            text-align: center;
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #60a5fa);
+        }
+
+        .pricing-title {
+            font-size: 2rem;
+            color: #e2e8f0;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .pricing-price {
+            font-size: 3.5rem;
+            color: #60a5fa;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .pricing-price span {
+            font-size: 1.5rem;
+            color: #94a3b8;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-features li {
+            color: #94a3b8;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            color: #60a5fa;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #3b82f6;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+            width: 100%;
+        }
+
+        .cta-button:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            background: #1e293b;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            color: #94a3b8;
+            border-top: 1px solid #334155;
+        }
+
+        .footer a {
+            color: #60a5fa;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer a:hover {
+            color: #3b82f6;
+        }
     </style>
 </head>
 <body>
@@ -177,36 +197,27 @@
 
     <div class="container">
         <section class="hero">
-            <h1>Get Instant Answers with AI</h1>
-            <p>Transform your browsing experience with our intelligent Chrome extension that answers your questions in real-time using advanced AI technology.</p>
-            <a href="#" class="cta-button">Add to Chrome - It's Free!</a>
+            <h1>Simple, Transparent Pricing</h1>
+            <p>Choose the plan that works best for you</p>
         </section>
 
-        <section class="features">
-            <div class="feature-card">
-                <h3>🎯 Instant Answers</h3>
-                <p>Get accurate answers to your questions instantly, powered by state-of-the-art AI technology.</p>
-            </div>
-            <div class="feature-card">
-                <h3>🔍 Context-Aware</h3>
-                <p>Our AI understands the context of your current webpage to provide more relevant answers.</p>
-            </div>
-            <div class="feature-card">
-                <h3>⚡ Easy to Use</h3>
-                <p>Simply highlight text and right-click, or use our intuitive command bar to get answers instantly.</p>
-            </div>
-        </section>
-
-        <section class="hero">
-            <h2>Start Getting Smart Answers Today</h2>
-            <p>Join thousands of users who are already saving time and getting better answers with NoSweat AI.</p>
-            <a href="#" class="cta-button">Install Extension</a>
+        <section class="pricing-card">
+            <h2 class="pricing-title">Pro Plan</h2>
+            <div class="pricing-price">$3.99<span>/month</span></div>
+            <ul class="pricing-features">
+                <li>300 question solves per month</li>
+                <li>AI-Powered Practice Exams</li>
+                <li>Smart Study Analytics</li>
+                <li>Personalized Learning</li>
+                <li>Comprehensive Coverage</li>
+            </ul>
+            <a href="#" class="cta-button">Get Started</a>
         </section>
     </div>
 
     <footer class="footer">
         <p>&copy; 2024 NoSweat AI. All rights reserved.</p>
-        <p><a href="/extension-privacy" style="color: #7c4dff; text-decoration: none;">Privacy Policy</a></p>
+        <p><a href="/extension-privacy">Privacy Policy</a></p>
     </footer>
 </body>
 </html> 

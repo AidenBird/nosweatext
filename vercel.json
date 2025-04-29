@@ -7,6 +7,14 @@
       {
         "source": "/extension-privacy",
         "destination": "/extension-privacy.html"
+      },
+      {
+        "source": "/features",
+        "destination": "/features.html"
+      },
+      {
+        "source": "/pricing",
+        "destination": "/pricing.html"
       }
     ]
   }
