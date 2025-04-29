@@ -120,19 +120,23 @@
             margin-top: 4rem;
             color: #94a3b8;
             border-top: 1px solid #222222;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
         }
 
         .footer a {
             color: #60a5fa;
             text-decoration: none;
             transition: color 0.2s;
-            display: block;
-            padding: 1rem;
-            margin: 0.5rem -1rem;
-            min-height: 44px;
-            width: 100%;
-            text-align: center;
-            border-radius: 8px;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
         }
 
         .footer a:hover {
@@ -392,8 +396,10 @@
 
     <footer class="footer">
         <p>&copy; 2024 NoSweat AI. All rights reserved.</p>
-        <a href="/extension-privacy">Privacy Policy</a>
-        <a href="/terms">Terms of Service</a>
+        <div class="footer-links">
+            <a href="/extension-privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Service</a>
+        </div>
     </footer>
 
     <div class="mobile-menu-backdrop"></div>
