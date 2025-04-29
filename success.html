@@ -21,8 +21,20 @@
         .header {
             background: linear-gradient(135deg, #2d1b69, #1a237e);
             color: white;
-            padding: 1.5rem;
-            text-align: center;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .header-logo {
+            height: 40px;
+            width: auto;
+        }
+
+        .header-title {
+            font-size: 1.5rem;
+            font-weight: bold;
         }
 
         .container {
@@ -83,7 +95,8 @@
 </head>
 <body>
     <div class="header">
-        🤖 NoSweat AI
+        <img src="/icon128.png" alt="NoSweat AI Logo" class="header-logo">
+        <span class="header-title">NoSweat AI</span>
     </div>
 
     <div class="container">
