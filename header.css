@@ -290,11 +290,18 @@
         padding: 1rem;
         min-height: auto;
         justify-content: flex-start;
+        position: relative;
     }
 
     .header-link {
         position: static;
         margin: 0;
+    }
+
+    .header-title {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     /* Hide all navigation on mobile */
