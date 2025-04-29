@@ -1,19 +1,18 @@
 async function loadHeader() {
     try {
+        // Load CSS first
+        const cssLink = document.createElement('link');
+        cssLink.rel = 'stylesheet';
+        cssLink.href = '/header.css';
+        document.head.appendChild(cssLink);
+
+        // Load header HTML
         const response = await fetch('/header.html');
         const html = await response.text();
         
-        // Extract the style and script content
-        const styleMatch = html.match(/<style>([\s\S]*?)<\/style>/);
-        const scriptMatch = html.match(/<script>([\s\S]*?)<\/script>/);
+        // Extract the HTML content
         const htmlMatch = html.match(/<div class="header">([\s\S]*?)<\/div>/);
-        
-        // Add styles to head
-        if (styleMatch) {
-            const styleElement = document.createElement('style');
-            styleElement.textContent = styleMatch[1];
-            document.head.appendChild(styleElement);
-        }
+        const scriptMatch = html.match(/<script>([\s\S]*?)<\/script>/);
         
         // Add header HTML to body
         if (htmlMatch) {
