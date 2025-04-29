@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Features - NoSweat AI</title>
+    <title>Terms of Service - NoSweat AI</title>
     <link rel="icon" type="image/png" href="/icon16.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -32,18 +32,6 @@
             min-height: 80px;
         }
 
-        .header-link {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            text-decoration: none;
-            color: inherit;
-            position: absolute;
-            left: 2rem;
-            padding: 0.5rem;
-            margin: -0.5rem;
-        }
-
         .header-logo {
             height: 40px;
             width: auto;
@@ -60,101 +48,51 @@
             margin: -0.5rem;
         }
 
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .nav-link {
-            color: #e2e8f0;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.2s;
-            font-size: 1.1rem;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-        }
-
-        .nav-link:hover {
-            color: #60a5fa;
-            background: rgba(96, 165, 250, 0.1);
-        }
-
-        .nav-link.active {
-            color: #60a5fa;
-            background: rgba(96, 165, 250, 0.1);
-        }
-
         .container {
-            max-width: 1200px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 2rem;
         }
 
-        .hero {
-            text-align: center;
-            padding: 4rem 0;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 700;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            color: #94a3b8;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 4rem 0;
-        }
-
-        .feature-card {
+        .terms-section {
             background: #111111;
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            transition: transform 0.2s;
+            margin-bottom: 2rem;
             border: 1px solid #222222;
-            text-align: center;
         }
 
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-icon {
-            font-size: 3rem;
+        .terms-section h1 {
+            font-size: 2.5rem;
             margin-bottom: 1rem;
-            color: #60a5fa;
-        }
-
-        .feature-card h3 {
             color: #e2e8f0;
-            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .terms-section h2 {
+            font-size: 1.5rem;
+            color: #60a5fa;
+            margin: 2rem 0 1rem;
             font-weight: 600;
         }
 
-        .feature-card p {
+        .terms-section p {
+            margin-bottom: 1rem;
             color: #94a3b8;
         }
 
-        .cta-button {
+        .terms-section ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .terms-section li {
+            margin-bottom: 0.5rem;
+            color: #94a3b8;
+        }
+
+        .home-button {
             display: inline-block;
             background: #3b82f6;
             color: white;
@@ -163,9 +101,10 @@
             text-decoration: none;
             font-weight: 600;
             transition: all 0.2s;
+            margin-top: 2rem;
         }
 
-        .cta-button:hover {
+        .home-button:hover {
             background: #2563eb;
             transform: translateY(-2px);
         }
@@ -201,43 +140,49 @@
             margin: 0.5rem 0;
         }
 
-        .rating-box {
-            background: rgba(147, 51, 234, 0.1);
-            border: 1px solid rgba(147, 51, 234, 0.2);
-            border-radius: 8px;
-            padding: 1rem 2rem;
-            margin: 1rem auto;
-            max-width: fit-content;
+        .header-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            color: inherit;
+            position: absolute;
+            left: 2rem;
+            padding: 0.5rem;
+            margin: -0.5rem;
         }
 
-        .stars {
-            color: #FCD34D;
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
+        .header-link:hover {
+            opacity: 0.9;
         }
 
-        .rating-text {
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .nav-link {
             color: #e2e8f0;
-            font-size: 1.25rem;
+            text-decoration: none;
             font-weight: 500;
+            transition: all 0.2s;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
         }
 
-        .top-badge {
-            background: rgba(147, 51, 234, 0.1);
-            border: 1px solid rgba(147, 51, 234, 0.2);
-            border-radius: 8px;
-            padding: 0.75rem 1.5rem;
-            margin-bottom: 1.5rem;
-            display: inline-block;
+        .nav-link:hover {
+            color: #60a5fa;
+            background: rgba(96, 165, 250, 0.1);
         }
 
-        .top-badge span {
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 600;
-            font-size: 1.25rem;
+        .nav-link.active {
+            color: #60a5fa;
+            background: rgba(96, 165, 250, 0.1);
         }
 
         .header-right {
@@ -403,7 +348,7 @@
         </a>
         <nav class="nav-links">
             <a href="/" class="nav-link">Home</a>
-            <a href="/features" class="nav-link active">Features</a>
+            <a href="/features" class="nav-link">Features</a>
             <a href="/pricing" class="nav-link">Pricing</a>
         </nav>
         <div class="header-right">
@@ -417,7 +362,7 @@
         <div class="mobile-menu">
             <nav class="nav-links">
                 <a href="/" class="nav-link">Home</a>
-                <a href="/features" class="nav-link active">Features</a>
+                <a href="/features" class="nav-link">Features</a>
                 <a href="/pricing" class="nav-link">Pricing</a>
             </nav>
             <div class="header-right">
@@ -428,38 +373,51 @@
     </div>
 
     <div class="container">
-        <section class="hero">
-            <div class="top-badge">
-                <span>#1 Rated Study Tool</span>
-            </div>
-            <h1>Features that Set Us Apart</h1>
-            <div class="rating-box">
-                <div class="stars">★★★★★</div>
-                <p class="rating-text">Voted #1 by 400+ College Students</p>
-            </div>
-        </section>
+        <section class="terms-section">
+            <h1>Terms of Service</h1>
+            <p>Effective Date: April 28, 2025</p>
 
-        <section class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">🎯</div>
-                <h3>Instant Accurate Answers</h3>
-                <p>Get precise answers instantly with our advanced AI technology. Our system maintains a 98.5% accuracy rate, ensuring you get the right answers every time.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🔒</div>
-                <h3>Undetectable</h3>
-                <p>Our solution works seamlessly across all websites without detection. Your academic integrity remains intact while you get the help you need.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">⭐</div>
-                <h3>Trusted by Students</h3>
-                <p>Rated 5 stars by over 400 students and growing. Join the community of successful students who have transformed their learning experience.</p>
-            </div>
-        </section>
+            <p>Welcome to NoSweat AI. By installing or using NoSweat AI, you agree to the following Terms of Service. Please read them carefully.</p>
 
-        <section class="hero">
-            <p>Join thousands of successful students today!</p>
-            <a href="/pricing" class="cta-button">Get Started</a>
+            <h2>1. Description of Service</h2>
+            <p>NoSweat AI is a browser extension that allows users to capture screenshots and use AI technology to solve visible questions. The Extension interacts with servers to analyze the screenshots and return suggested answers.</p>
+
+            <h2>2. Eligibility</h2>
+            <p>You must be at least 13 years old to use NoSweat AI. By using the Extension, you represent that you meet this age requirement.</p>
+
+            <h2>3. User Responsibilities</h2>
+            <p>You agree to use NoSweat AI only for lawful and personal educational purposes.</p>
+            <p>You agree not to misuse the Extension, including attempting to reverse-engineer, modify, or interfere with its functionality.</p>
+            <p>You are responsible for any content you choose to capture and submit through the Extension.</p>
+
+            <h2>4. Account Registration</h2>
+            <p>Certain features may require authentication. Users are responsible for maintaining the confidentiality of their account credentials. You agree to notify us immediately if you suspect unauthorized use of your account.</p>
+
+            <h2>5. Payment and Subscriptions</h2>
+            <p>NoSweat AI offers both free and paid subscription plans. Paid plans are billed through a third-party payment provider (Stripe). Subscriptions automatically renew unless canceled. You may manage or cancel your subscription at any time via the "Manage Subscription" feature inside the Extension.</p>
+
+            <h2>6. Data Collection and Privacy</h2>
+            <p>NoSweat AI collects limited user data such as email addresses for authentication purposes. We do not collect or store any screenshots, school names, course names, or payment information. For more details, please review our Privacy Policy.</p>
+
+            <h2>7. Intellectual Property</h2>
+            <p>The NoSweat AI Extension, including its software and branding, is the property of NoSweat AI. You may not copy, modify, or distribute any part of the Extension without explicit permission.</p>
+
+            <h2>8. Disclaimers</h2>
+            <p>NoSweat AI is provided on an "as is" and "as available" basis.</p>
+            <p>We make no guarantees regarding the accuracy or completeness of answers generated through the Extension.</p>
+            <p>We are not liable for any damages or losses resulting from your use of the Extension.</p>
+
+            <h2>9. Modifications</h2>
+            <p>We reserve the right to modify or discontinue any feature of NoSweat AI at any time without notice. Updated versions of these Terms will be posted with a new "Effective Date."</p>
+
+            <h2>10. Termination</h2>
+            <p>We may suspend or terminate your access to NoSweat AI if you violate these Terms or if required by law.</p>
+
+            <h2>11. Contact Us</h2>
+            <p>If you have any questions about these Terms, please contact us at:</p>
+            <p>Email: nosweatai@gmail.com</p>
+
+            <a href="/" class="home-button">Return to Home</a>
         </section>
     </div>
 

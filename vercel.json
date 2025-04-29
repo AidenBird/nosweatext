@@ -1,21 +1,38 @@
 {
-    "rewrites": [
-      {
-        "source": "/success",
-        "destination": "/success.html"
-      },
-      {
-        "source": "/extension-privacy",
-        "destination": "/extension-privacy.html"
-      },
-      {
-        "source": "/features",
-        "destination": "/features.html"
-      },
-      {
-        "source": "/pricing",
-        "destination": "/pricing.html"
-      }
+    "version": 2,
+    "routes": [
+        {
+            "src": "/",
+            "dest": "/index.html"
+        },
+        {
+            "src": "/features",
+            "dest": "/features.html"
+        },
+        {
+            "src": "/pricing",
+            "dest": "/pricing.html"
+        },
+        {
+            "src": "/success",
+            "dest": "/success.html"
+        },
+        {
+            "src": "/extension-privacy",
+            "dest": "/extension-privacy.html"
+        },
+        {
+            "src": "/terms",
+            "dest": "/terms.html"
+        },
+        {
+            "src": "/icon16.png",
+            "dest": "/icon16.png"
+        },
+        {
+            "src": "/icon128.png",
+            "dest": "/icon128.png"
+        }
     ]
-  }
+}
   
