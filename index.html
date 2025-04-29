@@ -19,17 +19,35 @@
             line-height: 1.6;
             color: #ffffff;
             background: #000000;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.05) 0%, transparent 20%);
+            background-attachment: fixed;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
+            position: relative;
         }
 
         .hero {
             text-align: center;
             padding: 4rem 0;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+            z-index: -1;
         }
 
         .hero h1, .hero h2 {
@@ -40,6 +58,7 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
             font-weight: 700;
+            text-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
         }
 
         .hero h2 {
@@ -51,6 +70,7 @@
             color: #94a3b8;
             max-width: 600px;
             margin: 0 auto;
+            line-height: 1.8;
         }
 
         .features {
@@ -61,60 +81,107 @@
         }
 
         .feature-card {
-            background: #111111;
+            background: rgba(17, 17, 17, 0.7);
             padding: 2rem;
-            border-radius: 10px;
+            border-radius: 16px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            transition: transform 0.2s;
-            border: 1px solid #222222;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(99, 102, 241, 0.1);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
         .feature-card:hover {
             transform: translateY(-5px);
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
         }
 
         .feature-card h3 {
             color: #60a5fa;
             margin-bottom: 1rem;
             font-weight: 600;
+            font-size: 1.5rem;
         }
 
         .feature-card p {
             color: #94a3b8;
+            line-height: 1.8;
         }
 
         .cta-button {
             display: inline-block;
-            background: #3b82f6;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
             color: white;
             padding: 1rem 2rem;
-            border-radius: 8px;
+            border-radius: 12px;
             text-decoration: none;
             font-weight: 600;
             margin-top: 2rem;
-            transition: all 0.2s;
+            transition: all 0.3s ease;
             min-height: 44px;
             min-width: 44px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
+            position: relative;
+            overflow: hidden;
+            border: none;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.2),
+                transparent
+            );
+            transition: 0.5s;
         }
 
         .cta-button:hover {
-            background: #2563eb;
             transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
         }
 
         .footer {
-            background: #111111;
+            background: rgba(17, 17, 17, 0.7);
             text-align: center;
             padding: 2rem;
             margin-top: 4rem;
             color: #94a3b8;
-            border-top: 1px solid #222222;
+            border-top: 1px solid rgba(99, 102, 241, 0.1);
             display: flex;
             flex-direction: column;
             align-items: center;
+            backdrop-filter: blur(10px);
         }
 
         .footer-links {
@@ -126,18 +193,21 @@
         .footer a {
             color: #60a5fa;
             text-decoration: none;
-            transition: all 0.2s;
+            transition: all 0.3s ease;
             padding: 0.75rem 1rem;
-            border-radius: 6px;
+            border-radius: 8px;
             min-height: 44px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
         }
 
         .footer a:hover {
             color: #3b82f6;
-            background: rgba(96, 165, 250, 0.1);
+            background: rgba(99, 102, 241, 0.2);
+            transform: translateY(-2px);
         }
 
         .footer p {
@@ -309,6 +379,22 @@
             .mobile-menu {
                 display: block;
             }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .feature-card {
+                padding: 1.5rem;
+            }
         }
 
         .undetectable-badge {
@@ -323,6 +409,7 @@
             border: 1px solid rgba(99, 102, 241, 0.2);
             box-shadow: 0 0 15px rgba(99, 102, 241, 0.3);
             animation: glow 2s ease-in-out infinite alternate;
+            backdrop-filter: blur(5px);
         }
 
         @keyframes glow {
