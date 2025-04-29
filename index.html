@@ -245,11 +245,28 @@
             flex-direction: column;
             align-items: flex-start;
             gap: 1rem;
+            display: flex;
         }
 
         .mobile-menu .nav-link {
             width: 100%;
             padding: 1rem;
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s;
+            font-size: 1.1rem;
+            border-radius: 6px;
+        }
+
+        .mobile-menu .nav-link:hover {
+            color: #60a5fa;
+            background: rgba(96, 165, 250, 0.1);
+        }
+
+        .mobile-menu .nav-link.active {
+            color: #60a5fa;
+            background: rgba(96, 165, 250, 0.1);
         }
 
         .mobile-menu .header-right {
@@ -257,12 +274,14 @@
             margin-top: 2rem;
             padding-top: 2rem;
             border-top: 1px solid #222222;
+            display: block;
         }
 
         .mobile-menu .header-right a {
             display: block;
             padding: 1rem;
             font-size: 1.1rem;
+            color: #e2e8f0;
         }
 
         @media (max-width: 768px) {
