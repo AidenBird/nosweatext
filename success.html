@@ -59,7 +59,10 @@
         .success-section h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
-            color: #e2e8f0;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             font-weight: 700;
         }
 
@@ -74,6 +77,21 @@
             font-size: 5rem;
             margin-bottom: 2rem;
             color: #60a5fa;
+            background: rgba(96, 165, 250, 0.1);
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            border: 2px solid #60a5fa;
+        }
+
+        .success-icon::before {
+            content: '✓';
+            font-size: 4rem;
+            line-height: 1;
         }
 
         .home-button {
@@ -170,9 +188,9 @@
 
     <div class="container">
         <section class="success-section">
-            <div class="success-icon">✅</div>
+            <div class="success-icon"></div>
             <h1>Success!</h1>
-            <p>Your request has been processed successfully. Thank you for using NoSweat AI!</p>
+            <p>Your subscription has been activated. Thank you for choosing NoSweatAI!</p>
             <a href="/" class="home-button">Return to Home</a>
         </section>
     </div>
