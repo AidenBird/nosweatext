@@ -122,7 +122,7 @@
     position: relative;
     width: 24px;
     height: 2px;
-    background-color: #ffffff;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
     border-radius: 4px;
     transition: background-color 0.3s;
 }
@@ -133,7 +133,7 @@
     position: absolute;
     width: 24px;
     height: 2px;
-    background-color: #ffffff;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
     border-radius: 4px;
     transition: transform 0.3s;
 }
@@ -147,15 +147,17 @@
 }
 
 .hamburger.active .hamburger-inner {
-    background-color: transparent;
+    background: transparent;
 }
 
 .hamburger.active .hamburger-inner::before {
     transform: translateY(8px) rotate(45deg);
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
 }
 
 .hamburger.active .hamburger-inner::after {
     transform: translateY(-8px) rotate(-45deg);
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
 }
 
 /* Mobile Menu Styles */
