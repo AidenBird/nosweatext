@@ -314,9 +314,10 @@
             position: static;
             transform: none;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
             gap: 1rem;
             display: flex;
+            width: 100%;
         }
 
         .mobile-menu .nav-link {
@@ -328,16 +329,24 @@
             transition: all 0.2s;
             font-size: 1.1rem;
             border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: rgba(96, 165, 250, 0.05);
+            border: 1px solid rgba(96, 165, 250, 0.1);
         }
 
         .mobile-menu .nav-link:hover {
             color: #60a5fa;
             background: rgba(96, 165, 250, 0.1);
+            transform: translateY(-1px);
         }
 
         .mobile-menu .nav-link.active {
             color: #60a5fa;
             background: rgba(96, 165, 250, 0.1);
+            border-color: rgba(96, 165, 250, 0.2);
         }
 
         .mobile-menu .header-right {
@@ -345,14 +354,43 @@
             margin-top: 2rem;
             padding-top: 2rem;
             border-top: 1px solid #222222;
-            display: block;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
         }
 
         .mobile-menu .header-right a {
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
             padding: 1rem;
             font-size: 1.1rem;
             color: #e2e8f0;
+            width: 100%;
+            background: rgba(96, 165, 250, 0.05);
+            border: 1px solid rgba(96, 165, 250, 0.1);
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .mobile-menu .header-right a:hover {
+            color: #60a5fa;
+            background: rgba(96, 165, 250, 0.1);
+            transform: translateY(-1px);
+        }
+
+        .mobile-menu .icon {
+            font-size: 1.2rem;
+            opacity: 0.7;
+            transition: all 0.2s;
+        }
+
+        .mobile-menu .nav-link:hover .icon,
+        .mobile-menu .header-right a:hover .icon {
+            opacity: 1;
+            transform: translateX(2px);
         }
 
         @media (max-width: 768px) {
@@ -408,13 +446,13 @@
         </div>
         <div class="mobile-menu">
             <nav class="nav-links">
-                <a href="/" class="nav-link active">Home</a>
-                <a href="/features" class="nav-link">Features</a>
-                <a href="/pricing" class="nav-link">Pricing</a>
+                <a href="/" class="nav-link active">Home <span class="icon">→</span></a>
+                <a href="/features" class="nav-link">Features <span class="icon">→</span></a>
+                <a href="/pricing" class="nav-link">Pricing <span class="icon">→</span></a>
             </nav>
             <div class="header-right">
-                <a href="/extension-privacy">Privacy Policy</a>
-                <a href="/terms">Terms of Service</a>
+                <a href="/extension-privacy">Privacy Policy <span class="icon">→</span></a>
+                <a href="/terms">Terms of Service <span class="icon">→</span></a>
             </div>
         </div>
     </div>
