@@ -23,7 +23,7 @@
         .header {
             background: #111111;
             color: white;
-            padding: 1.5rem 2rem;
+            padding: 2rem 2rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -41,8 +41,15 @@
             left: 2rem;
         }
 
-        .header-link:hover {
-            opacity: 0.9;
+        .header-logo {
+            height: 40px;
+            width: auto;
+        }
+
+        .header-title {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #e2e8f0;
         }
 
         .nav-links {
@@ -58,11 +65,20 @@
             color: #e2e8f0;
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.2s;
+            transition: all 0.2s;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
         }
 
         .nav-link:hover {
             color: #60a5fa;
+            background: rgba(96, 165, 250, 0.1);
+        }
+
+        .nav-link.active {
+            color: #60a5fa;
+            background: rgba(96, 165, 250, 0.1);
         }
 
         .container {
@@ -171,7 +187,7 @@
         </a>
         <nav class="nav-links">
             <a href="/" class="nav-link">Home</a>
-            <a href="/features" class="nav-link">Features</a>
+            <a href="/features" class="nav-link active">Features</a>
             <a href="/pricing" class="nav-link">Pricing</a>
         </nav>
     </div>
