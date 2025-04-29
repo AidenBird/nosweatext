@@ -106,12 +106,26 @@
         .footer a:hover {
             color: #3b82f6;
         }
+
+        .header-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .header-link:hover {
+            opacity: 0.9;
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <img src="/icon128.png" alt="NoSweat AI Logo" class="header-logo">
-        <span class="header-title">NoSweat AI</span>
+        <a href="/" class="header-link">
+            <img src="/icon128.png" alt="NoSweat AI Logo" class="header-logo">
+            <span class="header-title">NoSweat AI</span>
+        </a>
     </div>
 
     <div class="container">
