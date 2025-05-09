@@ -645,6 +645,20 @@
             createParticles();
             revealOnScroll();
         });
+        document.addEventListener('DOMContentLoaded', () => {
+            const path = window.location.pathname.split('/')[1]; // gets "sam" from /sam
+            if (path) {
+                console.log("Affiliate click detected:", path);
+      
+                // Optional: send to an analytics service or log somewhere
+                // Example: Replace with your actual tracking service
+                fetch('https://nosweat-ai.vercel.app/api/track-affiliate', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ affiliateId: path })
+                }).catch(err => console.error("Tracking failed:", err));
+            }
+        });
     </script>
 </body>
 </html> 
