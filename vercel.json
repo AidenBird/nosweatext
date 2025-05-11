@@ -6,6 +6,10 @@
             "dest": "/index.html"
         },
         {
+            "src": "/finals",
+            "dest": "/index.html"
+        },
+        {
             "src": "/max",
             "dest": "/index.html"
         },
