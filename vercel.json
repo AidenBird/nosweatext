@@ -6,6 +6,10 @@
             "dest": "/index.html"
         },
         {
+            "src": "/max",
+            "dest": "/index.html"
+        },
+        {
             "src": "/",
             "dest": "/index.html"
         },
