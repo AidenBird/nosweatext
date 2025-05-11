@@ -18,6 +18,10 @@
             "dest": "/index.html"
         },
         {
+            "src": "/lucas",
+            "dest": "/index.html"
+        },
+        {
             "src": "/features",
             "dest": "/features.html"
         },
